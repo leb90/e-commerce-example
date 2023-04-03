@@ -17,6 +17,7 @@ const schema = buildSchema(`
     description: String!
     image: String!
     price: Float!
+    quantity: Int!
   }
 `);
 
@@ -29,6 +30,7 @@ const books = [
     description: "A novel of decadence and decay in the roaring twenties",
     image: "https://source.unsplash.com/kfLp0IWzy9o",
     price: 11.99,
+    quantity: 25
   },
   {
     id: 2,
@@ -39,6 +41,7 @@ const books = [
       "A story of racial injustice and loss of innocence in the American South",
     image: "https://source.unsplash.com/K3GJd_oVwSE",
     price: 10.99,
+    quantity: 25
   },
   {
     id: 3,
@@ -48,6 +51,7 @@ const books = [
     description: "A dystopian novel set in a totalitarian society",
     image: "https://source.unsplash.com/FnYqrw6Mg_c",
     price: 9.99,
+    quantity: 25
   },
   {
     id: 4,
@@ -58,6 +62,7 @@ const books = [
       "A dystopian novel set in a future world where people are controlled and conditioned by a government-enforced drug called soma",
     image: "https://source.unsplash.com/uW2D3YwY80A",
     price: 8.99,
+    quantity: 25
   },
   {
     id: 5,
@@ -67,6 +72,7 @@ const books = [
     description: "A story of adolescent angst and rebellion",
     image: "https://source.unsplash.com/5vDl2Z0C_xA",
     price: 7.99,
+    quantity: 25
   },
   {
     id: 6,
@@ -76,6 +82,7 @@ const books = [
     description: "A story of an aging fisherman's battle with a giant marlin",
     image: "https://source.unsplash.com/cnmaDG3YqIc",
     price: 6.99,
+    quantity: 25
   },
   {
     id: 7,
@@ -86,6 +93,7 @@ const books = [
       "A high-fantasy epic about a hobbit's quest to destroy the One Ring and defeat the dark lord Sauron",
     image: "https://source.unsplash.com/kXoVfTXBNYs",
     price: 13.99,
+    quantity: 25
   },
   {
     id: 8,
@@ -95,6 +103,7 @@ const books = [
     description: "A romantic novel of manners",
     image: "https://source.unsplash.com/XcLzl3iZv_w",
     price: 9.99,
+    quantity: 25
   },
   {
     id: 9,
@@ -105,6 +114,7 @@ const books = [
       "A story of a man's moral corruption and the ugliness that hides beneath physical beauty",
     image: "https://source.unsplash.com/ywrHt9XvQg0",
     price: 5.99,
+    quantity: 25
   },
 ];
 

@@ -11,6 +11,7 @@
   "dependencies": {
     "@apollo/client": "^3.7.11",
     "@beyonk/google-fonts-webpack-plugin": "^1.7.0",
+    "@material-ui/icons": "^4.11.3",
     "@types/node": "18.15.11",
     "@types/react": "18.0.32",
     "@types/react-dom": "18.0.11",

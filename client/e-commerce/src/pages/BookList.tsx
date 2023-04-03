@@ -12,6 +12,8 @@ const BOOKS_QUERY = gql`
       year
       image
       description
+      price
+      quantity
     }
   }
 `;

@@ -1,5 +1,16 @@
-import styled from 'styled-components';
-import { useState } from 'react';
+import styled from "styled-components";
+import React, { useContext, useState } from "react";
+import { CartContext } from "../contexts/CartContext";
+
+export type BookType = {
+  quantity: any;
+  image: string | undefined;
+  id: number;
+  title: string;
+  author: string;
+  price: number;
+  cover: string;
+};
 
 const Modal = styled.div`
   background-color: rgba(0, 0, 0, 0.5);
@@ -105,6 +116,7 @@ const Button = styled.button`
 
 function Book({ book }: { book: any }) {
   const [showModal, setShowModal] = useState(false);
+  const { state, dispatch } = useContext(CartContext);
 
   const handleOpenModal = () => {
     setShowModal(true);
@@ -114,6 +126,12 @@ function Book({ book }: { book: any }) {
     setShowModal(false);
   };
 
+  const handleAddToCart = (book: BookType) => {
+    if (book) {
+        dispatch({ type: 'ADD_BOOK', book: book });
+      }
+  };
+
   return (
     <ListItem>
       <CoverImage src={book.image} alt={book.title} />
@@ -121,6 +139,9 @@ function Book({ book }: { book: any }) {
         <BookTitle>{book.title}</BookTitle>
         <BookAuthor>by {book.author}</BookAuthor>
         <BookDescription>{book.description}</BookDescription>
+        <Button onClick={() => handleAddToCart(book)}>
+          Add to Cart ({state.books.length})
+        </Button>
         <Button onClick={handleOpenModal}>View Details</Button>
       </BookInfo>
       {showModal && (
